@@ -1,29 +1,37 @@
 import React, { useState } from 'react';
+import MemberForm from './components/MemberForm';
+import Members from './components/Members';
 
 import './App.css';
 // import logo from './logo.svg';
 
 function App() {
-  const [teamMember] = useState();
+  const [members, setMembers] = useState([
+    {
+      id: 1,
+      name: 'Gregory',
+      email: 'g.hawman@gmail.com',
+      role: 'Web Dev'
+    }
+  ]);
 
+    const addNewMember = member => {
+      const newMember = {
+        id: Date.now(),
+        name: member.name,
+        email: member.email,
+        role: member.role
+      };
+      setMembers([...members, newMember]);
+    };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  return (
+    <div>
+      <h1>Team Members</h1>
+      <Members members={members} />
+      <MemberForm addNewMember={addNewMember} />
+    </div>
+  );
 
   // REACT SPINNING LOGO
   // return (
