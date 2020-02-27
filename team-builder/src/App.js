@@ -6,14 +6,53 @@ import './App.css';
 // import logo from './logo.svg';
 
 function App() {
-  const [members, setMembers] = useState([
+  const [members, setMembers] = useState(
+    [
     {
       id: 1,
-      name: 'Gregory',
+      name: 'Ira Sanchez',
+      email: 'ira.sanchez@gmail.com',
+      role: 'Team Lead'
+    },
+    {
+      id: 2,
+      name: 'Alex Martinez',
+      email: 'alex.martinez@gmail.com',
+      role: 'Web Dev, student'
+    },
+    {
+      id: 3,
+      name: 'Brian Wardwell',
+      email: 'brian.wardwell.com',
+      role: 'Web Dev, student'
+    },
+    {
+      id: 4,
+      name: 'David Alverez',
+      email: 'david.alverez.com',
+      role: 'Web Dev, student'
+    },
+    {
+      id: 5,
+      name: 'Gregory Hawman',
       email: 'g.hawman@gmail.com',
-      role: 'Web Dev'
+      role: 'Web Dev, student'
+    },
+    {
+      id: 6,
+      name: 'Henry Ramirez',
+      email: 'g.hawman@gmail.com',
+      role: 'Web Dev, student'
+    },
+    {
+      id: 7,
+      name: 'Tiffany Crosby',
+      email: 'g.hawman@gmail.com',
+      role: 'Web Dev, student'
     }
-  ]);
+    
+    ]
+  );
 
     const addNewMember = member => {
       const newMember = {
